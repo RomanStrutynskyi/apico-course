@@ -1,0 +1,19 @@
+mixin task-3(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .o-task-three.js-task-three(class=spec.__class)&attributes(attributes)
+    h2.o-task-three__title Задача 3 - Сортування стрічки
+    h3.o-task-three__title Завдання: написати функцію яка сортує стрічку. Кожне слово в стрічці буде містити цифру від 1 до 9.
+    +form({ '__class': 'o-task-three__form',
+    Items:[
+      {
+        id:'inputTaskthree',
+        class:'js-task-three-input',
+        text:'Введіть стрічку натисніть Enter'
+      },
+    ],
+      idTextarea:'textareaTaskthree',
+      classTextarea:'js-task-three-textarea',
+      textTextarea:'Результат:'
+  })

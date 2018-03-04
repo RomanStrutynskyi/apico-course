@@ -1,0 +1,14 @@
+mixin form(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .m-form(class=spec.__class)&attributes(attributes)
+    .m-form__items
+      each item in spec.Items
+        .m-form__item
+          label(for=item.id).m-form__label=item.text
+          +input({ '__class': 'm-form__input'})(id=item.id class=item.class)
+    .m-form__field
+      label(for=spec.idTextarea).m-form__label=spec.textTextarea
+      +textarea({ '__class': 'm-form__textarea'})(id=spec.idTextarea class=spec.classTextarea)    
+

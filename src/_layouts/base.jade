@@ -1,0 +1,33 @@
+include ./collector
+
+//- Custom Configuration
+block config
+  //- Setup site's base URL to match the "baseUrl" key within `package.json`
+  //- Otherwise default to relative pathing
+  //- https://www.geeksforgeeks.org/find-next-greater-number-set-digits/
+  - var baseUrl = config.baseUrl || './'
+  - var currentPage = config.currentPage || 'main'
+
+doctype html
+<html class='no-js' lang='en'>
+
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+  block title
+    title= site.data.global.siteName
+  meta(name='description', content=site.data.global.description)
+  meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+  block stylesheets
+    link(rel='stylesheet', href= baseUrl + 'styles/main.css')
+
+body(data-page=currentPage)
+  block header
+  
+  block content
+
+  block scripts
+    script(src= baseUrl + 'scripts/libs/jquery.min.js')
+    script(src= baseUrl + 'scripts/main.js')
+
+</html>

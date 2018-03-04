@@ -1,0 +1,19 @@
+mixin task-1(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .o-task-one.js-task-one(class=spec.__class)&attributes(attributes)
+    h2.o-task-one__title Задача 1 - Кількість співпадінь
+    h3.o-task-one__title Завдання: написати функцію яка буде знаходити кількість співпадінь певного елементу в масиві
+    +form({ '__class': 'o-task-one__form',
+      Items:[
+        {
+          id:'inputTaskOne',
+          class:'js-task-one-input',
+          text:'Введіть масив елементів через кому і натисніть Enter'
+        },
+      ],
+        idTextarea:'textareaTaskOne',
+        classTextarea:'js-task-one-textarea',
+        textTextarea:'Результат:'
+    })

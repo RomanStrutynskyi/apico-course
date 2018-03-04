@@ -1,0 +1,13 @@
+extends _layouts/base
+
+block title
+  title= site.data.global.titleHome
+
+block content
+  .container
+    .row
+      h1.col-12 Test job done by the developer Roman Strutynskyi
+      +task-1({ '__class': 'col-md-6 col-12'})
+      +task-2({ '__class': 'col-md-6 col-12'})
+      +task-3({ '__class': 'col-md-6 col-12'})
+      +task-4({ '__class': 'col-md-6 col-12'})

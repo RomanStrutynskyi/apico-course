@@ -1,0 +1,24 @@
+mixin task-4(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .o-task-four.js-task-four(class=spec.__class)&attributes(attributes)
+    h2.o-task-four__title 4 - Черга в супермаркеті
+    h3.o-task-four__title Завдання: написати функцію яка обраховує загальний час потрібний для того щоб обслужити всіх людей.
+    +form({ '__class': 'o-task-four__form',
+      Items:[
+        {
+          id:'customers',
+          class:'js-task-four-customers',
+          text:'Введіть час який буде затрачений на покупців через кому'
+        },
+        {
+          id:'quantity',
+          class:'js-task-four-quantity',
+          text:'Введіть кількіть кас і натисніть Enter'
+        },
+      ],
+        idTextarea:'textareaTaskfour',
+        classTextarea:'js-task-four-textarea',
+        textTextarea:'Результат:'
+    })
