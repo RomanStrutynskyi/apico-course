@@ -1,0 +1,19 @@
+mixin task-5(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .o-task-five.js-task-five(class=spec.__class)&attributes(attributes)
+    h2.o-task-five__title Завдання 5 - Наступне більше число
+    h3.o-task-five__title Завдання: вам потрібно написати функцію яка приймає додатнє число і повертає наступне більше число, утворене з тих самих цифер.
+    +form({ '__class': 'o-task-five__form',
+      Items:[
+        {
+          id:'inputTaskfive',
+          class:'js-task-five-input',
+          text:'Введіть число і натисніть Enter'
+        },
+      ],
+        idTextarea:'textareaTaskfive',
+        classTextarea:'js-task-five-textarea',
+        textTextarea:'Результат:'
+    })
