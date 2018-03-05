@@ -9,7 +9,7 @@ export default {
     const self = this;
     $(this.classes.input).keypress(function (e) {
       if (e.which == 13) {
-        let arr = $(this).val().split(",").map(function (item) {
+        const arr = $(this).val().split(",").map(function (item) {
           return item;
         });
         $(self.classes.textarea).val(self.sortArray(arr))
@@ -17,7 +17,8 @@ export default {
     });
   },
   sortArray(arr) {
-    let name = [], quantity = [], parseArray = [], prev, comma = /\,/g; 
+    let name = [], quantity = [], parseArray = [], prev;
+    const comma = /\,/g; 
     arr.sort();
     arr.forEach((element, index) => {
       if (element !== prev) {

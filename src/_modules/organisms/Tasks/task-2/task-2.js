@@ -12,10 +12,10 @@ export default {
     const self = this;
     $(this.classes.desirableSum).keypress(function (e) {
       if (e.which == 13) {
-        let capital = parseFloat($(self.classes.capital).val());
-        let interestRate = parseFloat($(self.classes.interestRate).val());
-        let taxes = parseFloat($(self.classes.taxes).val());
-        let desirableSum = parseFloat($(self.classes.desirableSum).val());
+        const capital = parseFloat($(self.classes.capital).val());
+        const interestRate = parseFloat($(self.classes.interestRate).val());
+        const taxes = parseFloat($(self.classes.taxes).val());
+        const desirableSum = parseFloat($(self.classes.desirableSum).val());
         $(self.classes.textarea).val(self.getYears(capital, interestRate, taxes, desirableSum))
       }
     });

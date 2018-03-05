@@ -10,10 +10,10 @@ export default {
     const self = this;
     $(this.classes.quantity).keypress(function (e) {
       if (e.which == 13) {
-        let customers = $(self.classes.customers).val().split(" ").map(function (item) {
+        const customers = $(self.classes.customers).val().split(" ").map(function (item) {
           return parseInt(item);
         });;
-        let quantity = parseInt($(this).val());
+        const quantity = parseInt($(this).val());
         if (quantity <= 0) {
           $(self.classes.textarea).val("0")
 
